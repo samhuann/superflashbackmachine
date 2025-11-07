@@ -1,2 +1,2 @@
-# superjournalmachine
+# superflashbackmachine
 A tool to backfill missing journal entries using hybrid retrieval–augmented generation. It pulls evidence from chats logs, photo EXIF/Takeout, emails (MBOX), and existing journal stubs (time, place), fuses BM25 + vector search with time/geo filters, and drafts grounded entries in your voice via a learned Style Card. Each fact carries citations, conflicts are flagged, and you approve edits in a human-in-the-loop review before exporting clean JSON. Bring your own LLM (or run local), swap vector stores/models easily, and reconstruct weeks or whole months with confidence.
