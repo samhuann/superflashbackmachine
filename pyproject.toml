@@ -1,0 +1,36 @@
+﻿[project]
+name = "superflashbackmachine"
+version = "0.1.0"
+description = "Local-first journal backfill tool with hybrid retrieval augmented generation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "Your Name" }
+]
+dependencies = [
+  "pydantic>=2.5",
+  "typer>=0.12",
+  "rich>=13.7",
+  "sentence-transformers>=2.5",
+  "faiss-cpu>=1.7.4",
+  "rank-bm25>=0.2.2",
+  "numpy>=1.26",
+  "python-dateutil>=2.9",
+  "pillow>=10.0",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.0.0"]
+
+[project.scripts]
+sfbm = "app.cli:app"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
